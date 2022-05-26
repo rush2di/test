@@ -1,3 +1,6 @@
+Identifier = admin@holidaze.com
+Password"= adminHolidaze1
+
 # Project Exam 2
 There are two options with this Project Exam. 
 You need to only choose one and please follow the deliveries carefully.
