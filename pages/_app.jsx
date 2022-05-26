@@ -7,6 +7,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import Layout from "components/Layout";
 import { AuthProvider, ProtectRoute } from "contexts/auth";
 
+import "../styles/globale.scss";
 import "../styles/style.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "react-toastify/dist/ReactToastify.min.css";
