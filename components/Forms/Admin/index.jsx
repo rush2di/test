@@ -64,7 +64,7 @@ const AdminForm = ({ initialValues, validationSchema, onSubmit }) => {
           </div>
           <div className="mb-1 w-100">
             <TextInput
-              label="Hotel price per night"
+              label="Hotel price per night in US dollars"
               name="price"
               type="number"
               placeholder="price per night"

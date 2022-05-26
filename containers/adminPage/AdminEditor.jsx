@@ -6,8 +6,9 @@ import { amenitiesToArr, setNotification } from "helpers/utils";
 import api from "services/api";
 
 const EditorForm = ({ data }) => {
-  const { query, push } = useRouter();
-  const { Amenities, Name, Location, Description, Stars, ImageSrc, Price } = data.attributes;
+  const router = useRouter();
+  const { Amenities, Name, Location, Description, Stars, ImageSrc, Price } =
+    data.attributes;
 
   const initialValues = {
     amenities: amenitiesToArr(Amenities),
@@ -24,7 +25,7 @@ const EditorForm = ({ data }) => {
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
       const body = { data: { ...transformValues(values) } };
-      const response = await api.put(`/api/hotels/${query.id}`, body);
+      const response = await api.put(`/api/hotels/${router.query.id}`, body);
 
       if (response) {
         setNotification()
@@ -32,7 +33,7 @@ const EditorForm = ({ data }) => {
           .onClose(() => {
             setSubmitting(false);
             resetForm();
-            push("/admin/list")
+            router.reload();
           });
       }
     } catch (error) {

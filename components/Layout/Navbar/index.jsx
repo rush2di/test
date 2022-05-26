@@ -87,12 +87,8 @@ const Navbar = () => {
               </ul>
               <ul className="nav__block">
                 <li className="mx-0-50">
-                  <SquareBTN>
-                    <Link href="/login">
-                      <a>
-                        <FontAwesomeIcon icon={["far", "user"]} size="xs" />
-                      </a>
-                    </Link>
+                  <SquareBTN href="/login">
+                    <FontAwesomeIcon icon={["far", "user"]} size="xs" />
                   </SquareBTN>
                 </li>
                 <li className="mx-0-50 nav--not-mobile">
