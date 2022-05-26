@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@300;400;500;600;700;800;900&display=swap");
+
+/* From Public Directory */
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/Archivo.ttf");
+  font-style: medium;
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Old Standard TT";
+  src: url("/fonts/Old+Standard+TT.ttf");
+  font-style: medium;
+  font-weight: normal;
+  font-display: swap;
+}
