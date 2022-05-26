@@ -1,0 +1,13 @@
+.intro {
+  min-height: 310px;
+  height: 100%;
+
+  & > div:first-child > img {
+    max-width: 150px;
+    max-height: 150px;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    border-radius: 50%;
+  }
+}

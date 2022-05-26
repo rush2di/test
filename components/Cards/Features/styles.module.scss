@@ -1,0 +1,17 @@
+.features {
+  position: relative;
+
+  & > div:first-child > div {
+    width: 50%;
+    height: 100%;
+  }
+  & > div:first-child > div img {
+    object-fit: contain !important;
+  }
+
+  & > div:first-child > span {
+    position: absolute;
+    top: -0.05rem;
+    right: 0rem;
+  }
+}

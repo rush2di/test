@@ -1,0 +1,390 @@
+.font {
+  &-main {
+    font-family: $font__main;
+  }
+  &-comp {
+    font-family: $font__comp;
+  }
+}
+
+.txt {
+  font-size: $text-paragraphs;
+  line-height: $text-line-height-sm;
+  font-weight: 300;
+
+  &-display-main {
+    font-size: $text-display-lg;
+    line-height: 115%;
+    font-weight: 600;
+    @include respond-to("x-small") {
+      font-size: $text-display-md;
+    }
+  }
+  &-display-comp {
+    margin-bottom: 1.15rem;
+    font-size: $text-display-md;
+    line-height: 115%;
+    font-weight: 600;
+    @include respond-to("x-small") {
+      font-size: 2.3rem;
+    }
+  }
+  &-h1 {
+    font-size: $text-h1;
+    line-height: $text-line-height-md;
+    font-weight: 600;
+  }
+  &-h2 {
+    font-size: $text-h2;
+    line-height: $text-line-height-md;
+    font-weight: 600;
+  }
+  &-h3 {
+    font-size: $text-h3;
+    line-height: $text-line-height-md;
+    font-weight: 600;
+  }
+  &-h4 {
+    font-size: $text-h4;
+    line-height: $text-line-height-md;
+    font-weight: 600;
+  }
+  &-h5 {
+    font-size: $text-h5;
+    line-height: $text-line-height-sm;
+    font-weight: 600;
+  }
+  &-h6 {
+    font-size: $text-h6;
+    line-height: $text-line-height-sm;
+    font-weight: 600;
+  }
+  &-btn {
+    font-size: $text-buttons;
+    line-height: $text-line-height-sm;
+    font-weight: 400;
+  }
+  &-md {
+    font-size: $text-paragraphs-md;
+    line-height: $text-line-height-md;
+    font-weight: 400;
+  }
+  &-sm {
+    font-size: $text-paragraphs-small;
+    line-height: $text-line-height-md;
+    font-weight: 400;
+  }
+  &-sm-bold {
+    font-size: $text-paragraphs-small;
+    line-height: $text-line-height-md;
+    font-weight: 600;
+  }
+  &-sm-caps {
+    font-size: $text-paragraphs-small;
+    line-height: $text-line-height-md;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  &-label {
+    color: $color-shades-500;
+  }
+  &-muted {
+    color: $color-shades-300;
+  }
+  &-prim {
+    color: $color-shades-800;
+  }
+  &-sec {
+    color: $color-shades-500;
+  }
+  &-light {
+    color: $color-shades-000;
+  }
+  &-no-wrap {
+    white-space: nowrap;
+  }
+  &-wrap {
+    white-space: pre-line;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-align-start {
+    text-align: start;
+  }
+  &-align-center {
+    text-align: center;
+  }
+  &-align-end {
+    text-align: end;
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+  &-capitalize {
+    text-transform: capitalize;
+  }
+  &-lowercase {
+    text-transform: lowercase;
+  }
+  &-underline {
+    text-decoration: underline;
+  }
+}
+
+.font-weight {
+  &-light {
+    font-weight: 200;
+  }
+  &-normal {
+    font-weight: 400;
+  }
+  &-medium {
+    font-weight: 600;
+  }
+  &-bold {
+    font-weight: 700;
+  }
+}
+
+.bg {
+  &-prim {
+    background-color: $color-shades-800;
+  }
+  &-sec {
+    background-color: $color-shades-400;
+  }
+}
+
+.border {
+  &-prim {
+    border: 1px solid $color-shades-500;
+  }
+  &-sec {
+    border: 1px solid $color-shades-400;
+  }
+}
+
+.elevation {
+  &-l-1 {
+    box-shadow: $effect-smooth-shadow-l1;
+  }
+  &-l-2 {
+    box-shadow: $effect-smooth-shadow-l2;
+  }
+  &-l-3 {
+    box-shadow: $effect-smooth-shadow-l3;
+  }
+  &-md-1 {
+    box-shadow: $effect-shadow-md-1;
+  }
+  &-md-2 {
+    box-shadow: $effect-shadow-md-2;
+  }
+  &-md-3 {
+    box-shadow: $effect-shadow-md-3;
+  }
+  &-sm-1 {
+    box-shadow: $effect-shadow-sm-1;
+  }
+  &-sm-2 {
+    box-shadow: $effect-shadow-sm-2;
+  }
+  &-sm-3 {
+    box-shadow: $effect-shadow-sm-3;
+  }
+}
+
+.d {
+  &-flex {
+    display: flex;
+    align-items: center;
+  }
+  &-block {
+    display: block;
+  }
+  &-inline-block {
+    display: inline-block;
+  }
+}
+
+.flex {
+  &-column {
+    flex-direction: column;
+  }
+  &-wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.align {
+  &-center {
+    align-items: center;
+  }
+  &-start {
+    align-items: flex-start;
+  }
+  &-end {
+    align-items: flex-end;
+  }
+}
+
+.justify {
+  &-center {
+    justify-content: center;
+  }
+  &-start {
+    justify-content: flex-start;
+  }
+  &-end {
+    justify-content: flex-end;
+  }
+  &-around {
+    justify-content: space-around;
+  }
+  &-between {
+    justify-content: space-between;
+  }
+  &-evenly {
+    justify-content: space-evenly;
+  }
+}
+
+.color {
+  &-main {
+    color: $color-primary !important;
+  }
+  &-comp {
+    color: $color-secondary !important;
+  }
+  &-success {
+    color: $color-success !important;
+  }
+  &-danger {
+    color: $color-danger !important;
+  }
+  &-warning {
+    color: $color-warning !important;
+  }
+  &-dark {
+    color: $color-shades-900 !important;
+  }
+  &-light {
+    color: $color-shades-000 !important;
+  }
+  &-muted {
+    color: $color-shades-300 !important;
+  }
+  &-label {
+    color: $color-shades-200 !important;
+  }
+}
+.bg {
+  &-success {
+    background-color: $color-success !important;
+  }
+  &-danger {
+    background-color: $color-danger !important;
+  }
+  &-warning {
+    background-color: $color-warning !important;
+  }
+  &-dark {
+    background-color: $color-shades-900 !important;
+  }
+  &-light {
+    background-color: $color-shades-000 !important;
+  }
+  &-muted {
+    background-color: $color-shades-300 !important;
+  }
+  &-label {
+    background-color: $color-shades-200 !important;
+  }
+  &-white {
+    background-color: white !important;
+  }
+  &-black {
+    background-color: black !important;
+  }
+}
+
+.border-radius {
+  &-600 {
+    border-radius: $structure-radius-circle;
+  }
+  &-500 {
+    border-radius: $structure-radius-xlg;
+  }
+  &-400 {
+    border-radius: $structure-radius-lg;
+  }
+  &-300 {
+    border-radius: $structure-radius-md;
+  }
+  &-200 {
+    border-radius: $structure-radius-sm;
+  }
+  &-100 {
+    border-radius: $structure-radius-xsm;
+  }
+}
+
+.letter-spacing {
+  &-100 {
+    letter-spacing: 0.05rem;
+  }
+  &-200 {
+    letter-spacing: 0.1rem;
+  }
+  &-300 {
+    letter-spacing: 0.15rem;
+  }
+  &-400 {
+    letter-spacing: 0.2rem;
+  }
+  &-500 {
+    letter-spacing: 0.25rem;
+  }
+}
+
+.bg-grads {
+  &-left {
+    background-image: linear-gradient(360deg, #000000c2, #0000007a);
+  }
+  &-right {
+    background-image: linear-gradient(360deg, #000000c2, #0000007a);
+  }
+  &-top {
+    background-image: linear-gradient(360deg, #000000c2, #0000007a);
+  }
+  &-bottom {
+    background-image: linear-gradient(360deg, #000000c2, #0000007a);
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.list {
+  &-decimal {
+    list-style: decimal;
+  }
+}
+
+.debugger {
+  border: 1px solid red;
+  width: 100%;
+
+  // &::before {
+  //   content: "";
+  //   display: block;
+  //   width: 100%;
+  //   height: 200px;
+  // }
+}

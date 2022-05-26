@@ -1,0 +1,34 @@
+@import "../../../styles/abstracts/variables/variables";
+@import "../../../styles/abstracts/mixins/mixins";
+
+.squareBtn {
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-shades-900;
+  width: 43px;
+  height: 46px;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background-color: $color-secondary;
+    color: $color-shades-000;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  &__content {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+  }
+}

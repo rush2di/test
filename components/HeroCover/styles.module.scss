@@ -1,0 +1,45 @@
+@import "../../styles/abstracts/variables/variables";
+@import "../../styles/abstracts/mixins/mixins";
+
+.hero {
+  position: relative;
+  background-color: $color-shades-700;
+  background-image: url("../../public/assets/images/BGIMG.jpg");
+  background-position: center center;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+  z-index: 0;
+
+  &__home {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & > div {
+    margin-top: 2rem;
+  }
+
+  &__page {
+    position: absolute;
+    margin-left: -1.5rem;
+    bottom: 0;
+  }
+
+  &__page > div {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    min-width: 170px;
+    padding: 1.25rem 2rem;
+    @include respond-to("x-small") {
+      border-bottom: 1px solid $color-shades-200;
+    }
+  }
+}

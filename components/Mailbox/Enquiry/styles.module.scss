@@ -1,0 +1,54 @@
+@import "../../../styles/abstracts/variables/variables";
+@import "../../../styles/abstracts/mixins/mixins";
+
+.mailenquiry {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 1rem 0.75rem;
+    border-bottom: 1px solid $color-shades-200;
+    transition: background-color 0.4s ease-out;
+    overflow: hidden;
+  }
+  &__wrapper:hover {
+    background-color: $color-shades-000 !important;
+  }
+  &__name {
+    width: 10%;
+    min-width: 100px;
+    overflow: hidden;
+  }
+  &__dateRange {
+    width: 40%;
+    min-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__guests {
+    width: 20%;
+    min-width: 130px;
+    overflow: hidden;
+    @include respond-to("small") {
+      text-align: end;
+      white-space: nowrap;
+      margin-left: auto;
+      min-width: initial;
+    }
+  }
+  &__date {
+    text-align: end;
+    white-space: nowrap;
+    margin-left: auto;
+    @include respond-to("small") {
+      display: none;
+    }
+  }
+  &__opened {
+    background-color: white;
+  }
+  &__notOpened {
+    background-color: $color-shades-100;
+  }
+}

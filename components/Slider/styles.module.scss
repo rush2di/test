@@ -1,0 +1,108 @@
+@import "../../styles/abstracts/variables/variables";
+@import "../../styles/abstracts/mixins/mixins";
+
+.slider {
+  &__wrapper {
+    background-color: white;
+    position: relative;
+    padding-bottom: 100px;
+    padding-top: 115px;
+    z-index: 1;
+    @include respond-to("small") {
+      padding-top: 5rem;
+      padding-bottom: 0;
+    }
+  }
+
+  &__prevBtn {
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 20px;
+    color: #111;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-out 0s;
+    position: absolute;
+    top: 40%;
+    z-index: 2;
+    left: 22%;
+    transform: translateY(-50%);
+    @include respond-to("large") {
+      left: 15%;
+    }
+    @include respond-to("small") {
+      left: 4%;
+    }
+  }
+
+  &__nextBtn {
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 20px;
+    color: #111;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-out 0s;
+    position: absolute;
+    top: 40%;
+    z-index: 2;
+    transform: translateY(-50%);
+    margin-left: 20px;
+    left: auto;
+    right: 22%;
+    background-color: #bead8e;
+    color: #fff;
+    @include respond-to("large") {
+      right: 15%;
+    }
+    @include respond-to("small") {
+      right: 4%;
+    }
+  }
+  &__img {
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    margin-top: -1.5rem;
+  }
+  &__img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__card {
+    @include respond-to("x-small") {
+      padding-right: 0.5rem !important;
+      padding-left: 0.5rem !important;
+    }
+  }
+
+  &__cardAmenities {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+  }
+
+  &__cardDesc {
+    margin-top: -1.5rem;
+    position: relative;
+    padding-bottom: 1.5rem;
+  }
+
+  &__cardDesc > div > div {
+    @include respond-to("small") {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__cardDesc > div > div > div > div {
+    @include truncate($text-paragraphs, $text-line-height-sm, 2);
+  }
+}

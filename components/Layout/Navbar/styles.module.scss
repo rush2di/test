@@ -1,0 +1,25 @@
+@import "../../../styles/abstracts/variables/variables";
+@import "../../../styles/abstracts/mixins/mixins";
+
+.navbar {
+  &__header {
+    position: relative;
+    max-height: 110px;
+    overflow: visible;
+    z-index: 1;
+    @include respond-to("small") {
+      max-height: 300px;
+    }
+  }
+  &__wrapper {
+    position: relative;
+    background-color: white;
+    margin-right: -1.5rem;
+    margin-left: -1.5rem;
+  }
+  &__mobile {
+    position: relative;
+    background-color: white;
+    padding: 0.5rem 0;
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../../styles/abstracts/variables/variables";
+@import "../../../styles/abstracts/mixins/mixins";
+
+.mailbox {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 1rem 0.75rem;
+    border-bottom: 1px solid $color-shades-200;
+    transition: background-color 0.4s ease-out;
+    overflow: hidden;
+  }
+  &__wrapper:hover {
+    background-color: $color-shades-000 !important;
+  }
+  &__name {
+    width: 10%;
+    min-width: 150px;
+    overflow: hidden;
+  }
+  &__message {
+    width: 80%;
+    min-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__date {
+    text-align: end;
+    white-space: nowrap;
+    @include respond-to("small") {
+      display: none;
+    }
+  }
+  &__opened {
+    background-color: white;
+  }
+  &__notOpened {
+    background-color: $color-shades-100;
+  }
+}

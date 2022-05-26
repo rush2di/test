@@ -1,0 +1,33 @@
+@import "../../styles/abstracts/variables/variables";
+@import "../../styles/abstracts/mixins/mixins";
+
+.hotelcover {
+  height: 100%;
+
+  & > div:first-child {
+    max-width: 550px;
+    position: relative;
+    @include respond-to("small") {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    min-height: 370px;
+    height: calc(100% - 8rem);
+    max-height: 600px;
+    object-fit: cover;
+    object-position: center;
+    margin-top: -3rem;
+    @include respond-to("large") {
+      min-height: 370px;
+    }
+    @include respond-to("medium") {
+      height: 450px;
+    }
+    @include respond-to("x-small") {
+      margin-top: 2rem;
+    }
+  }
+}

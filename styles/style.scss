@@ -1,0 +1,150 @@
+// @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&family=Tomorrow:wght@300;400;500;600;700;800&display=swap");
+
+/* ABSTRACTS
+--------------------------------------------- */
+@import "abstracts/abstracts";
+
+/*--------------------------------------------------------------
+# BASE
+--------------------------------------------------------------*/
+@import "base/base";
+
+/*--------------------------------------------------------------
+# THEME CONFIG
+--------------------------------------------------------------*/
+
+.--theme-dark {
+  .--themed {
+    &-bg {
+      background-color: $color-bg-dark;
+      transition: background-color 0.4s $easing-expo;
+    }
+
+    &-logo {
+      color: $color-secondary;
+      transition: color 0.4s $easing-expo;
+    }
+
+    &-nav {
+      color: $color-shades-000 !important;
+      transition: color 0.4s $easing-expo;
+    }
+
+    &-nav a {
+      color: $color-shades-000 !important;
+      transition: color 0.4s $easing-expo;
+    }
+
+    &-titles {
+      color: $color-shades-000;
+      transition: color 0.4s $easing-expo;
+    }
+
+    &-hr {
+      background-color: $color-shades-800;
+      transition: background-color 0.4s $easing-expo;
+    }
+
+    &-icon {
+      > svg:first-child path:first-child {
+        fill: #20242d;
+        transition: all 0.4s $easing-expo;
+      }
+      > svg:first-child path:not(:first-child) {
+        stroke: $color-secondary;
+        transition: all 0.4s $easing-expo;
+      }
+      > div {
+        color: $color-secondary;
+        transition: all 0.4s $easing-expo;
+      }
+    }
+  }
+  p {
+    color: $color-shades-300;
+  }
+}
+
+.--theme-light {
+  .--themed {
+    &-bg {
+      background-color: $color-bg-light;
+      transition: background-color 0.4s $easing-expo;
+    }
+
+    &-logo {
+      color: $color-primary;
+      transition: color 0.4s $easing-expo;
+    }
+
+    &-nav {
+      color: $color-shades-900 !important;
+      transition: color 0.4s $easing-expo;
+    }
+
+    &-nav a {
+      color: $color-shades-900 !important;
+      transition: color 0.4s $easing-expo;
+    }
+
+    &-titles {
+      color: $color-shades-900;
+      transition: color 0.4s $easing-expo;
+    }
+
+    &-hr {
+      background-color: $color-shades-200;
+      transition: background-color 0.4s $easing-expo;
+    }
+
+    &-icon {
+      > svg:first-child path:first-child {
+        fill: #fde68a;
+        transition: all 0.4s $easing-expo;
+      }
+      > svg:first-child path:not(:first-child) {
+        stroke: #20242d;
+        transition: all 0.4s $easing-expo;
+      }
+      > div {
+        color: #20242d;
+        transition: all 0.4s $easing-expo;
+      }
+    }
+  }
+}
+
+.--static-icon {
+  > svg:first-child path:first-child {
+    fill: #20242d;
+    transition: all 0.4s $easing-expo;
+  }
+  > svg:first-child path:not(:first-child) {
+    stroke: $color-secondary;
+    transition: all 0.4s $easing-expo;
+  }
+  > div {
+    color: $color-secondary;
+    transition: all 0.4s $easing-expo;
+  }
+}
+
+/*--------------------------------------------------------------
+# COSTUME STYLES
+--------------------------------------------------------------*/
+
+.select {
+  &__menu {
+    background-color: white !important;
+  }
+  &__menu > div > div {
+    color: $color-shades-800;
+  }
+  &__control {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+  &__control > div > div {
+    color: $color-shades-300;
+  }
+}

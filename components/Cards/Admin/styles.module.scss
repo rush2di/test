@@ -1,0 +1,47 @@
+@import "../../../styles/abstracts/variables/variables";
+@import "../../../styles/abstracts/mixins/mixins";
+
+.admincard {
+  position: relative;
+
+  & > div:first-child {
+    height: 100px;
+  }
+
+  & > div:first-child > div {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 1.5rem;
+  }
+
+  & > div:first-child > div {
+    overflow: visible !important;
+  }
+
+  & > div:first-child > div img {
+    object-fit: contain !important;
+  }
+
+  & > div:first-child > span {
+    position: absolute;
+    top: -0.05rem;
+    right: 0rem;
+  }
+
+  &__notification {
+    position: absolute;
+    top: -12px;
+    right: -25px;
+    width: 45px;
+    height: 45px;
+    background-color: $color-danger;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    border-radius: 50%;
+    z-index: 10;
+  }
+}
